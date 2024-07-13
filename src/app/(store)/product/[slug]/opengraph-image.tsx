@@ -3,6 +3,7 @@ import { Product } from '@/data/types/product'
 import { env } from '@/env'
 import colors from 'tailwindcss/colors'
 import { ImageResponse } from 'next/og'
+import Image from 'next/image'
 
 // Route segment config
 export const runtime = 'edge'
@@ -52,7 +53,7 @@ export default async function OgImage({
           flexDirection: 'column',
         }}
       >
-        <img src={productImageURL} alt="" style={{ width: '100%' }} />
+        <Image src={productImageURL} alt="" style={{ width: '100%' }} />
       </div>
     ),
     // ImageResponse options
